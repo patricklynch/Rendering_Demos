@@ -33,8 +33,8 @@ void main()
 		}
 	}
 	
-	//if ( ssao < 0.0 ) ssao = 0.0;
-	ssao = clamp( ssao, 0.0, 1.0 );
+	if ( ssao < 0.0 ) ssao = 0.0;
+	//ssao = clamp( ssao, 0.0, 1.0 );
 	
 	vec4 diffuseColor = texture2D( mainTexture, gl_TexCoord[0].st ) * mainColor;
 	gl_FragColor = mix( diffuseColor, vec4( 0, 0, 0, 1 ), ssao );

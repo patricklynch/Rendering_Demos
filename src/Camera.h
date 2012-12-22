@@ -13,8 +13,11 @@ public:
 	virtual ~Camera();
 	virtual void update( const float deltaTime );
 	
-	ci::CameraPersp* cinderCamera() { return &mCinderCamera; }
+	ci::CameraPersp& cinderCamera() { return mCinderCamera; }
 	virtual ci::Vec3f globalPosition();
+	
+	void setRange( float near, float far );
+	void setZoom( float zoom );
 	
 private:
 	static Camera* sInstance;

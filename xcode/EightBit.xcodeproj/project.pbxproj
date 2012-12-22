@@ -46,6 +46,15 @@
 		5AA8D9E11682AFEF008EEF83 /* wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AA8D9DF1682AFEF008EEF83 /* wood.png */; };
 		5AA8D9E31682BDC7008EEF83 /* sketch.frag in Resources */ = {isa = PBXBuildFile; fileRef = 5AA8D9E21682BD21008EEF83 /* sketch.frag */; };
 		5AA8D9E51682C8DF008EEF83 /* paper.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AA8D9E41682C8DF008EEF83 /* paper.png */; };
+		5AA8D9EB168346E1008EEF83 /* SsaoDemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8D9E9168346E1008EEF83 /* SsaoDemo.cpp */; };
+		5AA8D9F116834ACB008EEF83 /* Demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8D9EF16834ACB008EEF83 /* Demo.cpp */; };
+		5AA8D9F416834E24008EEF83 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8D9F216834E24008EEF83 /* Renderer.cpp */; };
+		5AA8D9F61683DEFD008EEF83 /* debug_depth.frag in Resources */ = {isa = PBXBuildFile; fileRef = 5AA8D9F51683DE4A008EEF83 /* debug_depth.frag */; };
+		5AA8D9F91683E1FA008EEF83 /* ScatteringDemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8D9F71683E1F9008EEF83 /* ScatteringDemo.cpp */; };
+		5AA8D9FC1683E21C008EEF83 /* ToonDemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8D9FA1683E21B008EEF83 /* ToonDemo.cpp */; };
+		5AA8D9FE1683F6D2008EEF83 /* scatter.frag in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8D9FD1683F6D2008EEF83 /* scatter.frag */; };
+		5AA8D9FF1683F6D3008EEF83 /* scatter.frag in Resources */ = {isa = PBXBuildFile; fileRef = 5AA8D9FD1683F6D2008EEF83 /* scatter.frag */; };
+		5AA8DA011683F722008EEF83 /* scatter.frag in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8DA001683F722008EEF83 /* scatter.frag */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +98,19 @@
 		5AA8D9DF1682AFEF008EEF83 /* wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wood.png; path = ../resources/wood.png; sourceTree = "<group>"; };
 		5AA8D9E21682BD21008EEF83 /* sketch.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = sketch.frag; sourceTree = "<group>"; };
 		5AA8D9E41682C8DF008EEF83 /* paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = paper.png; path = ../resources/paper.png; sourceTree = "<group>"; };
+		5AA8D9E9168346E1008EEF83 /* SsaoDemo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SsaoDemo.cpp; path = ../src/SsaoDemo.cpp; sourceTree = "<group>"; };
+		5AA8D9EA168346E1008EEF83 /* SsaoDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SsaoDemo.h; path = ../src/SsaoDemo.h; sourceTree = "<group>"; };
+		5AA8D9EF16834ACB008EEF83 /* Demo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Demo.cpp; path = ../src/Demo.cpp; sourceTree = "<group>"; };
+		5AA8D9F016834ACB008EEF83 /* Demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Demo.h; path = ../src/Demo.h; sourceTree = "<group>"; };
+		5AA8D9F216834E24008EEF83 /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer.cpp; path = ../src/Renderer.cpp; sourceTree = "<group>"; };
+		5AA8D9F316834E24008EEF83 /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer.h; path = ../src/Renderer.h; sourceTree = "<group>"; };
+		5AA8D9F51683DE4A008EEF83 /* debug_depth.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = debug_depth.frag; sourceTree = "<group>"; };
+		5AA8D9F71683E1F9008EEF83 /* ScatteringDemo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ScatteringDemo.cpp; path = ../src/ScatteringDemo.cpp; sourceTree = "<group>"; };
+		5AA8D9F81683E1F9008EEF83 /* ScatteringDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScatteringDemo.h; path = ../src/ScatteringDemo.h; sourceTree = "<group>"; };
+		5AA8D9FA1683E21B008EEF83 /* ToonDemo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ToonDemo.cpp; path = ../src/ToonDemo.cpp; sourceTree = "<group>"; };
+		5AA8D9FB1683E21C008EEF83 /* ToonDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToonDemo.h; path = ../src/ToonDemo.h; sourceTree = "<group>"; };
+		5AA8D9FD1683F6D2008EEF83 /* scatter.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = scatter.frag; path = ../resources/scatter.frag; sourceTree = "<group>"; };
+		5AA8DA001683F722008EEF83 /* scatter.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = scatter.frag; path = ../resources/scatter.frag; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* EightBit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EightBit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -125,6 +147,16 @@
 				5AA8D9A41681491A008EEF83 /* Input.h */,
 				5AA8D9A71681491A008EEF83 /* Node.cpp */,
 				5AA8D9A81681491A008EEF83 /* Node.h */,
+				5AA8D9EF16834ACB008EEF83 /* Demo.cpp */,
+				5AA8D9F016834ACB008EEF83 /* Demo.h */,
+				5AA8D9F216834E24008EEF83 /* Renderer.cpp */,
+				5AA8D9F316834E24008EEF83 /* Renderer.h */,
+				5AA8D9E9168346E1008EEF83 /* SsaoDemo.cpp */,
+				5AA8D9EA168346E1008EEF83 /* SsaoDemo.h */,
+				5AA8D9F71683E1F9008EEF83 /* ScatteringDemo.cpp */,
+				5AA8D9F81683E1F9008EEF83 /* ScatteringDemo.h */,
+				5AA8D9FA1683E21B008EEF83 /* ToonDemo.cpp */,
+				5AA8D9FB1683E21C008EEF83 /* ToonDemo.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -187,6 +219,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5AA8D9FD1683F6D2008EEF83 /* scatter.frag */,
 				5AA8D9D316829227008EEF83 /* toon.frag */,
 				5AA8D9DB1682AE33008EEF83 /* passthru_post.vert */,
 				5AA8D9D416829227008EEF83 /* passthru.vert */,
@@ -195,8 +228,10 @@
 				5AA8D9BD16815315008EEF83 /* depthmap.frag */,
 				5AA8D9BE16815315008EEF83 /* depthmap.vert */,
 				5AA8D9C3168155E6008EEF83 /* outline.frag */,
+				5AA8D9F51683DE4A008EEF83 /* debug_depth.frag */,
 				5AA8D9CD1682302C008EEF83 /* ssao.frag */,
 				5AA8D9E21682BD21008EEF83 /* sketch.frag */,
+				5AA8DA001683F722008EEF83 /* scatter.frag */,
 				5AA8D9E41682C8DF008EEF83 /* paper.png */,
 				5AA8D99B16813325008EEF83 /* earth.png */,
 				5AA8D9D91682A932008EEF83 /* earth_sketch.png */,
@@ -275,9 +310,11 @@
 				5AA8D9D716829233008EEF83 /* toon.frag in Resources */,
 				5AA8D9DD1682AE37008EEF83 /* passthru_post.vert in Resources */,
 				5AA8D9D816829233008EEF83 /* passthru.vert in Resources */,
+				5AA8D9F61683DEFD008EEF83 /* debug_depth.frag in Resources */,
 				5AA8D99C16813325008EEF83 /* earth.png in Resources */,
 				5AA8D9E31682BDC7008EEF83 /* sketch.frag in Resources */,
 				5AA8D99E1681376F008EEF83 /* background.jpg in Resources */,
+				5AA8D9FF1683F6D3008EEF83 /* scatter.frag in Resources */,
 				5AA8D9DA1682A933008EEF83 /* earth_sketch.png in Resources */,
 				5AA8D9E01682AFEF008EEF83 /* wood_sketch.png in Resources */,
 				5AA8D9E11682AFEF008EEF83 /* wood.png in Resources */,
@@ -305,6 +342,13 @@
 				5AA8D9D516829227008EEF83 /* toon.frag in Sources */,
 				5AA8D9D616829227008EEF83 /* passthru.vert in Sources */,
 				5AA8D9DC1682AE33008EEF83 /* passthru_post.vert in Sources */,
+				5AA8D9EB168346E1008EEF83 /* SsaoDemo.cpp in Sources */,
+				5AA8D9F116834ACB008EEF83 /* Demo.cpp in Sources */,
+				5AA8D9F416834E24008EEF83 /* Renderer.cpp in Sources */,
+				5AA8D9F91683E1FA008EEF83 /* ScatteringDemo.cpp in Sources */,
+				5AA8D9FC1683E21C008EEF83 /* ToonDemo.cpp in Sources */,
+				5AA8D9FE1683F6D2008EEF83 /* scatter.frag in Sources */,
+				5AA8DA011683F722008EEF83 /* scatter.frag in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

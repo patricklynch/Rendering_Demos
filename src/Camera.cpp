@@ -15,13 +15,17 @@ ly::Camera* ly::Camera::get()
 	return sInstance;
 }
 
+void ly::Camera::setZoom( float zoom )
+{
+	mBody.position.z = zoom;
+}
+
 ly::Camera::Camera()
 {
 	mCinderCamera.setPerspective( 30, app::getWindowAspectRatio(), 1.0f, 4000.0f );
 	
 	mPivot.rotation.x	= -20.0f;
-	mBody.position.z	= 1000.0f;
-	position.y			= 20.0f;
+	mBody.position.z	= 500.0f;
 	
 	mBody.parent = &mPivot;
 	mPivot.parent = this;
