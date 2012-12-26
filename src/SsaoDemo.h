@@ -20,8 +20,11 @@ private:
 	ci::gl::Fbo* mDepthMap;
 	ci::gl::Fbo mSsaoFbo;
 	
+	ci::gl::Texture mBlurTexture;
+	
 	ci::gl::GlslProg mObjectShader;
 	ci::gl::GlslProg mSsaoShader;
+	ci::gl::GlslProg mSsaoShader2;
 };
 
 }

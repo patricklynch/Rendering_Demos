@@ -55,6 +55,8 @@
 		5AA8D9FE1683F6D2008EEF83 /* scatter.frag in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8D9FD1683F6D2008EEF83 /* scatter.frag */; };
 		5AA8D9FF1683F6D3008EEF83 /* scatter.frag in Resources */ = {isa = PBXBuildFile; fileRef = 5AA8D9FD1683F6D2008EEF83 /* scatter.frag */; };
 		5AA8DA011683F722008EEF83 /* scatter.frag in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8DA001683F722008EEF83 /* scatter.frag */; };
+		5AA8DA1016866C8B008EEF83 /* ssao2.frag in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8DA0F16866C8B008EEF83 /* ssao2.frag */; };
+		5AA8DA1116866C93008EEF83 /* ssao2.frag in Resources */ = {isa = PBXBuildFile; fileRef = 5AA8DA0F16866C8B008EEF83 /* ssao2.frag */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +113,7 @@
 		5AA8D9FB1683E21C008EEF83 /* ToonDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToonDemo.h; path = ../src/ToonDemo.h; sourceTree = "<group>"; };
 		5AA8D9FD1683F6D2008EEF83 /* scatter.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = scatter.frag; path = ../resources/scatter.frag; sourceTree = "<group>"; };
 		5AA8DA001683F722008EEF83 /* scatter.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = scatter.frag; path = ../resources/scatter.frag; sourceTree = "<group>"; };
+		5AA8DA0F16866C8B008EEF83 /* ssao2.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = ssao2.frag; path = ../resources/ssao2.frag; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* EightBit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EightBit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -230,6 +233,7 @@
 				5AA8D9C3168155E6008EEF83 /* outline.frag */,
 				5AA8D9F51683DE4A008EEF83 /* debug_depth.frag */,
 				5AA8D9CD1682302C008EEF83 /* ssao.frag */,
+				5AA8DA0F16866C8B008EEF83 /* ssao2.frag */,
 				5AA8D9E21682BD21008EEF83 /* sketch.frag */,
 				5AA8DA001683F722008EEF83 /* scatter.frag */,
 				5AA8D9E41682C8DF008EEF83 /* paper.png */,
@@ -308,6 +312,7 @@
 				5AA8D9BB16814F94008EEF83 /* shader_lit.frag in Resources */,
 				5AA8D9D216823032008EEF83 /* ssao.frag in Resources */,
 				5AA8D9D716829233008EEF83 /* toon.frag in Resources */,
+				5AA8DA1116866C93008EEF83 /* ssao2.frag in Resources */,
 				5AA8D9DD1682AE37008EEF83 /* passthru_post.vert in Resources */,
 				5AA8D9D816829233008EEF83 /* passthru.vert in Resources */,
 				5AA8D9F61683DEFD008EEF83 /* debug_depth.frag in Resources */,
@@ -349,6 +354,7 @@
 				5AA8D9FC1683E21C008EEF83 /* ToonDemo.cpp in Sources */,
 				5AA8D9FE1683F6D2008EEF83 /* scatter.frag in Sources */,
 				5AA8DA011683F722008EEF83 /* scatter.frag in Sources */,
+				5AA8DA1016866C8B008EEF83 /* ssao2.frag in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

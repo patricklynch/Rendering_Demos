@@ -21,6 +21,7 @@ public:
 	void drawNodes( std::vector<Node*>& nodes, ci::gl::GlslProg* currentShader, GLenum cullingMode = GL_BACK );
 	void setCamera( ci::CameraPersp* camera ) { mCamera = camera; }
 	void debugDrawDepthMap( ci::gl::Fbo* depthMap );
+	ci::Surface32f createBlurSurface( int width, int height );
 	
 private:
 	Renderer();

@@ -15,6 +15,7 @@ SsaoDemo::SsaoDemo()
 	
 	mObjectShader		= gl::GlslProg( loadResource( "passthru.vert"),			loadResource( "shader_lit.frag" ) );
 	mSsaoShader			= gl::GlslProg( loadResource( "passthru_post.vert"),	loadResource( "ssao.frag" ) );
+	mSsaoShader2		= gl::GlslProg( loadResource( "passthru_post.vert"),	loadResource( "ssao2.frag" ) );
 	
 	gl::Fbo::Format fboFormat;
 	fboFormat.enableMipmapping();
@@ -27,6 +28,8 @@ SsaoDemo::SsaoDemo()
 	settings.drawDepthTexture = false;
 	settings.drawPostFilter = true;
 	settings.drawPostFilterOnly = true;
+	
+	mBlurTexture = gl::Texture( mRenderer->createBlurSurface( 8, 8 ) );
 }
 
 SsaoDemo::~SsaoDemo() {}
@@ -75,9 +78,10 @@ void SsaoDemo::draw()
 		return;
 	}
 	
-	// Draw SSAO
-	currentShader = &mSsaoShader;
+	if ( true )
 	{
+		// Draw SSAO
+		currentShader = &mSsaoShader2;
 		currentShader->bind();
 		{
 			gl::setMatricesWindow( app::getWindowSize(), false );
@@ -93,14 +97,39 @@ void SsaoDemo::draw()
 			currentShader->uniform( "strength", 0.5f );
 			currentShader->uniform( "depthRange", .5f );
 			gl::drawSolidRect( Rectf( app::getWindowBounds() ) );
+			mDepthMap->unbindTexture();
+			mSsaoFbo.unbindTexture();
 		}
-		mSsaoFbo.unbindTexture();
+		currentShader->unbind();
 	}
-	currentShader->unbind();
-	mDepthMap->unbindTexture();
+	else
+	{
+		// Draw SSAO
+		currentShader = &mSsaoShader;
+		currentShader->bind();
+		{
+			gl::setMatricesWindow( app::getWindowSize(), false );
+			mSsaoFbo.bindTexture( 0 );
+			currentShader->uniform( "mainTexture", 0 );
+			mDepthMap->bindDepthTexture( 1 );
+			currentShader->uniform( "mainColor", ColorA( 1, 1, 1, 1 ) );
+			currentShader->uniform( "depthTexture", 1 );
+			currentShader->uniform( "spread", 0.002f );
+			currentShader->uniform( "samples", 7 );
+			if ( !settings.drawPostFilter )
+				currentShader->uniform( "samples", 0 ); // easy way to turn it off
+			currentShader->uniform( "strength", 0.5f );
+			currentShader->uniform( "depthRange", .5f );
+			gl::drawSolidRect( Rectf( app::getWindowBounds() ) );
+			mDepthMap->unbindTexture();
+			mSsaoFbo.unbindTexture();
+		}
+		currentShader->unbind();
+	}
 }
 
 void SsaoDemo::update( const float deltaTime )
 {
 	Demo::update( deltaTime );
 }
+

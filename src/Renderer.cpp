@@ -109,3 +109,20 @@ void ly::Renderer::debugDrawDepthMap( ci::gl::Fbo* depthMap )
 	depthMap->unbindTexture();
 	currentShader->unbind();
 }
+
+ci::Surface32f ly::Renderer::createBlurSurface( int width, int height )
+{
+	Surface32f surface( width, height, false );
+	for( int x = 0; x < width; x++) {
+		for( int y = 0; y < height; y++) {
+			Vec2f p = Vec2f( -width/2 + x, -height/2 + y );
+			float value = 1.0f - math<float>::clamp( p.distance( Vec2f::zero() ) / (width/2), 0.0f, 1.0f );
+			//console() << "value = " << value << std::endl;
+			Color color = ColorA( p.x, p.y, value );
+			surface.setPixel( Vec2i( x, y ), color );
+		}
+	}
+	return surface;
+}
+
+
