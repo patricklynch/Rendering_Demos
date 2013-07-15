@@ -15,7 +15,7 @@
 
 namespace ly {
 
-class EightBitApp : public ci::app::AppBasic {
+class RenderingDemosApp : public ci::app::AppBasic {
 public:
 	void setup();
 	void prepareSettings( ci::app::AppBasic::Settings *settings );

@@ -1,7 +1,8 @@
-#include "EightBitApp.h"
+#include "RenderingDemosApp.h"
 #include "SsaoDemo.h"
 #include "ToonDemo.h"
 #include "ScatteringDemo.h"
+#include "DetectiveDemo.h"
 
 #include "cinder/ip/Hdr.h"
 
@@ -13,24 +14,24 @@ using namespace ci;
 using namespace ci::app;
 using namespace std;
 
-void EightBitApp::prepareSettings(cinder::app::AppBasic::Settings *settings)
+void RenderingDemosApp::prepareSettings(cinder::app::AppBasic::Settings *settings)
 {
 	settings->setWindowSize( 1024, 768 );
 	//settings->setFrameRate( 10.0f );
 }
 
-void EightBitApp::setup()
+void RenderingDemosApp::setup()
 {
 	mPrevElapsedSeconds = 0.0f;
 	
-	ly::Input::get()->addListenerForKey( boost::bind( &EightBitApp::nextDemo, this ), KeyEvent::KEY_SPACE );
+	ly::Input::get()->addListenerForKey( boost::bind( &RenderingDemosApp::nextDemo, this ), KeyEvent::KEY_SPACE );
 	
 	mCurrentDemo = NULL;
 	mCurrentDemoType = Demo::None;
 	nextDemo();
 }
 
-void EightBitApp::nextDemo()
+void RenderingDemosApp::nextDemo()
 {
 	if ( mCurrentDemo != NULL ) {
 		delete mCurrentDemo;
@@ -53,13 +54,17 @@ void EightBitApp::nextDemo()
 			mCurrentDemo = new ScatteringDemo();
 			console() << "Showing Sub Surface Scattering Demo." << std::endl;
 			break;
+		case Demo::Detective:
+			mCurrentDemo = new DetectiveDemo();
+			console() << "Showing DetectiveDemo Mode Demo." << std::endl;
+			break; 
 		default:break;
 	}
 }
 
 float angle = 0.0f;
 
-void EightBitApp::update()
+void RenderingDemosApp::update()
 {
     float currentTime = app::getElapsedSeconds();
     float deltaTime = currentTime - mPrevElapsedSeconds;
@@ -69,10 +74,10 @@ void EightBitApp::update()
 	mCurrentDemo->update( deltaTime );
 }
 
-void EightBitApp::draw()
+void RenderingDemosApp::draw()
 {
 	gl::clear( ColorA( 0, 0, 0, 0 ) );
 	mCurrentDemo->draw();
 }
 
-CINDER_APP_BASIC( EightBitApp, RendererGl )
+CINDER_APP_BASIC( RenderingDemosApp, RendererGl )

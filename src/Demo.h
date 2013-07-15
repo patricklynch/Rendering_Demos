@@ -26,7 +26,7 @@ public:
 	Demo();
 	~Demo();
 	
-	enum { Ssao, Scatter, Toon, Count, None } Type;
+	enum { Ssao, Scatter, Toon, Detective, Count, None } Type;
 	virtual int type() const { return None; }
 	
 	virtual void update( const float deltaTime );

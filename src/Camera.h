@@ -19,7 +19,7 @@ public:
 	void setRange( float near, float far );
 	void setZoom( float zoom );
 	
-private:
+protected:
 	static Camera* sInstance;
 	Camera();
 	

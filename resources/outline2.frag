@@ -27,5 +27,5 @@ void main()
 	outline *= 500.0;
 	outline = clamp( outline, 0.0, 1.0 );
 	vec4 diffuseColor = texture2D( mainTexture, gl_TexCoord[0].st ) * mainColor;
-	gl_FragColor = mix( diffuseColor, outlineColor, outline );
+	gl_FragColor = mix( vec4(1,1,1,1), outlineColor, outline );
 }

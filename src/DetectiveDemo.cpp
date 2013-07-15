@@ -1,4 +1,4 @@
-#include "ToonDemo.h"
+#include "DetectiveDemo.h"
 
 #include "cinder/app/App.h"
 
@@ -7,7 +7,7 @@ using namespace ly;
 using namespace ci;
 using namespace ci::app;
 
-ToonDemo::ToonDemo()
+DetectiveDemo::DetectiveDemo()
 {
 	Demo::createSomeObjects();
 	
@@ -51,9 +51,9 @@ ToonDemo::ToonDemo()
 	}
 }
 
-ToonDemo::~ToonDemo() {}
+DetectiveDemo::~DetectiveDemo() {}
 
-void ToonDemo::createSketch( std::pair<ci::gl::Texture*, ci::gl::Fbo>& sketchPair, ci::Vec2f size )
+void DetectiveDemo::createSketch( std::pair<ci::gl::Texture*, ci::gl::Fbo>& sketchPair, ci::Vec2f size )
 {
 	sketchPair.second = gl::Fbo( size.x, size.y );
 	sketchPair.second.bindFramebuffer();
@@ -68,7 +68,7 @@ void ToonDemo::createSketch( std::pair<ci::gl::Texture*, ci::gl::Fbo>& sketchPai
 	sketchPair.second.unbindFramebuffer();
 }
 
-void ToonDemo::draw()
+void DetectiveDemo::draw()
 {
 	// Set the current camera
 	mRenderer->setCamera( &mCamera->cinderCamera() );
@@ -115,7 +115,6 @@ void ToonDemo::draw()
 	
 	// Draw outlines
 	if ( settings.drawPostFilter ) {
-		return;
 	}
 	
 	currentShader = &mOutlineShader;
@@ -139,7 +138,7 @@ void ToonDemo::draw()
 	mDepthMap->unbindTexture();
 }
 
-void ToonDemo::update( const float deltaTime )
+void DetectiveDemo::update( const float deltaTime )
 {
 	Demo::update( deltaTime );
 }
